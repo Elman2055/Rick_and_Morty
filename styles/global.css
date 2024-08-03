@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+body {
+  background-color: #fffff0;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  margin-top: 80px;
+}
+
+.charactersPosition {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.charactersCards {
+  cursor: pointer;
+  width: 18%;
+  background-color: bisque;
+  color: brown;
+  padding: 20px 0px;
+  text-align: center;
+  word-wrap: break-word;
+  border-radius: 15px;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+.charactersImage {
+  border-radius: 15px;
+  width: 60%;
+}

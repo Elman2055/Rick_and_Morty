@@ -9,14 +9,14 @@
 header {
   margin: 0 auto;
   height: 50px;
-  width: 80%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .headerNavigation {
-  width: 40%;
+  width: 20%;
   display: flex;
   justify-content: space-between;
 }
