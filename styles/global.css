@@ -11,7 +11,7 @@ body {
 .container {
   width: 80%;
   margin: 20px auto;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .charactersPosition {
@@ -102,6 +102,7 @@ h2 {
 .episodeList {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
 .episodeItem {
@@ -126,4 +127,9 @@ h2 {
 .episodeDate {
   font-size: 1em;
   color: #666;
+}
+
+.notHover:hover {
+  cursor: auto;
+  transform: none;
 }

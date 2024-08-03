@@ -3,8 +3,10 @@
 import { Pagination } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const EpisodesPage = () => {
+  const router = useRouter();
   const [episodes, setEpisodes] = useState<[]>([]);
 
   const fetchDataEpisodes = async (page: number) => {
@@ -20,15 +22,19 @@ const EpisodesPage = () => {
 
   return (
     <div className="container episodesContainer">
-      <h1 className="title">Rick and Morty Episodes</h1>
+      <h2 className="title">Rick and Morty Episodes</h2>
       <ul className="episodeList">
         {episodes.map((episode: any) => (
-          <li key={episode.id} className="episodeItem">
+          <li
+            key={episode.id}
+            className="episodeItem"
+            onClick={() => router.push(`episodes/${episode.id}`)}
+          >
             <h2 className="episodeName">{episode.name}</h2>
             <p className="episodeDate">Air Date: {episode.air_date}</p>
           </li>
         ))}
-      </ul>
+      </ul> 
       <div className="pagination">
         <Pagination
           count={3}

@@ -28,6 +28,7 @@ const Index = () => {
 
   return (
     <div className="container">
+      <h2 className="title">Rick and Morty Characters</h2>
       <div className="charactersPosition">
         {characters.map((el: TCharacters) => (
           <div
