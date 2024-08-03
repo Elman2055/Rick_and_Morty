@@ -5,15 +5,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-const Episodes = () => {
+const Locations = () => {
   const router = useRouter();
-  const [episodes, setEpisodes] = useState<[]>([]);
+  const [locations, setLocations] = useState<[]>([]);
 
   const fetchDataEpisodes = async (page: number) => {
     const { data } = await axios.get(
-      `https://rickandmortyapi.com/api/episode/?page=${page}`
+      `https://rickandmortyapi.com/api/location/?page=${page}`
     );
-    setEpisodes(data.results);
+    setLocations(data.results);
   };
 
   useEffect(() => {
@@ -22,22 +22,22 @@ const Episodes = () => {
 
   return (
     <div className="container episodesContainer">
-      <h2 className="title">Rick and Morty Episodes</h2>
+      <h2 className="title">Rick and Morty Locations</h2>
       <ul className="episodeList">
-        {episodes.map((episode: any) => (
+        {locations.map((location: any) => (
           <li
-            key={episode.id}
+            key={location.id}
             className="episodeItem"
-            onClick={() => router.push(`episodes/${episode.id}`)}
+            onClick={() => router.push(`locations/${location.id}`)}
           >
-            <h2 className="episodeName">{episode.name}</h2>
-            <p className="episodeDate">Air Date: {episode.air_date}</p>
+            <h2 className="episodeName">{location.name}</h2>
+            <p className="episodeDate">Type: {location.type}</p>
           </li>
         ))}
       </ul>
       <div className="pagination">
         <Pagination
-          count={3}
+          count={7}
           color="primary"
           onChange={(event, page) => fetchDataEpisodes(page)}
         />
@@ -46,4 +46,4 @@ const Episodes = () => {
   );
 };
 
-export default Episodes;
+export default Locations;
