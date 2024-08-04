@@ -1,0 +1,22 @@
+.charactersPosition {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  .charactersCards {
+    cursor: pointer;
+    width: 18%;
+    background-color: bisque;
+    color: brown;
+    padding: 20px 0px;
+    text-align: center;
+    word-wrap: break-word;
+    border-radius: 15px;
+
+    .charactersImage {
+      border-radius: 15px;
+      width: 60%;
+    }
+  }
+}
