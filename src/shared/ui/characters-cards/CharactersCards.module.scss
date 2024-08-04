@@ -7,12 +7,21 @@
   .charactersCards {
     cursor: pointer;
     width: 18%;
-    background-color: bisque;
+    background-color: #eeecec;
+    box-shadow: 5px 5px 0px rgb(0 0 0 / 15%);
     color: brown;
     padding: 20px 0px;
     text-align: center;
     word-wrap: break-word;
     border-radius: 15px;
+
+    @media only screen and (max-width: 510px) {
+      width: 80%;
+    }
+
+    @media (min-width: 511px) and (max-width: 1024px) {
+      width: 200px;
+    }
 
     .charactersImage {
       border-radius: 15px;

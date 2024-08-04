@@ -1,8 +1,20 @@
 .container {
-  width: 50%;
+  width: 60%;
   margin: 20px auto;
-  margin-top: 60px;
+  margin-top: 70px;
   text-align: center;
+
+  @media only screen and (max-width: 510px) {
+    width: 85%;
+  }
+
+  @media (min-width: 511px) and (max-width: 850px) {
+    width: 80%;
+  }
+
+  @media (min-width: 851px) and (max-width: 1300px) {
+    width: 70%;
+  }
 
   .title {
     text-align: center;

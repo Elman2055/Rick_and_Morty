@@ -1,9 +1,14 @@
 import { TCharacter } from "@/features/types";
+import { useMobile } from "@/shared/hooks/server";
 import styles from "./Character.module.scss";
 
 const Character = ({ character }: { character: TCharacter }) => {
+  const isMobile = useMobile();
+
   return (
-    <div className={styles.character}>
+    <div
+      className={`${styles.character} ${isMobile && styles.characterMobile}`}
+    >
       <div className={styles.characterBackground}>
         <div className={styles.characterInfo}>
           <img

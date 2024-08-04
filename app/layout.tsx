@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Header from "@/widgets/header/Header";
+import Header from "@/widgets/header";
+import { useMobile } from "@/shared/hooks/server";
 import "@/../styles/global.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,10 +16,12 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
+  const isMobile = useMobile();
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
+        <Header isMobile={isMobile} />
         {children}
       </body>
     </html>
