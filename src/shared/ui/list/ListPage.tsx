@@ -7,18 +7,19 @@ const ListPage = ({ list, title, route }: TList) => {
 
   return (
     <ul className={styles.list}>
-      {list.map((el: TListInfo) => (
-        <li
-          key={el.id}
-          className={styles.listItem}
-          onClick={() => router.push(`${route}/${el.id}`)}
-        >
-          <h2 className={styles.listName}>{el.name}</h2>
-          <p className={styles.listTitle}>
-            {title} {el.type ? el.type : el.air_date}
-          </p>
-        </li>
-      ))}
+      {list &&
+        list.map((el: TListInfo) => (
+          <li
+            key={el.id}
+            className={styles.listItem}
+            onClick={() => router.push(`${route}/${el.id}`)}
+          >
+            <h2 className={styles.listName}>{el.name}</h2>
+            <p className={styles.listTitle}>
+              {title} {el.type ? el.type : el.air_date}
+            </p>
+          </li>
+        ))}
     </ul>
   );
 };

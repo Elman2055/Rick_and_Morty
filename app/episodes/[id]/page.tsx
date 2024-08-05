@@ -1,10 +1,17 @@
 import { EpisodesInfoPage } from "@/app/episodes";
-import { RickAndMortyService } from "@/shared/services";
 
-const Episode = async ({ params }: any) => {
-  const episode = await RickAndMortyService.getEpisodeInfo(params.id);
+export const metadata = {
+  title: "Episodes Info",
+  description: "This is the episode info page of the application.",
+  keywords: "Next.js, React, example",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
-  return <EpisodesInfoPage episode={episode} />;
+const Episode = ({ params }: any) => {
+  return <EpisodesInfoPage id={params.id} />;
 };
 
 export default Episode;

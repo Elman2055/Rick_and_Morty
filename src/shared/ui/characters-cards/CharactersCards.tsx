@@ -9,11 +9,11 @@ const CharactersCards = ({ characters }: { characters: TCharacters[] }) => {
 
   return (
     <div className={styles.charactersPosition}>
-      {characters.map((el: TCharacters) => (
+      {characters && characters.map((el: TCharacters) => (
         <div
           key={el.id}
           className={styles.charactersCards}
-          onClick={() => router.push(`/character/${el.id}`)}
+          onClick={() => router.push(`/character/${el.id}`)}  
         >
           <img
             src={el.image}

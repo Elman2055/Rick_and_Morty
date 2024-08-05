@@ -1,10 +1,16 @@
 import { CharacterPage } from "@/app/character";
-import { RickAndMortyService } from "@/shared/services";
 
-const Character = async ({ params }: any) => {
-  const character = await RickAndMortyService.getCharacter(params.id);
+export const metadata = {
+  title: "Character Info",
+  description: "This is the character page of the application.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
-  return <CharacterPage character={character} />;
+const Character = ({ params }: any) => {
+  return <CharacterPage id={params.id} />;
 };
 
 export default Character;

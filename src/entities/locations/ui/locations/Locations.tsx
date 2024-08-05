@@ -1,26 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { RickAndMortyService } from "@/shared/services";
+import { useState } from "react";
 import { PaginationPage } from "@/shared/ui";
+import { useGetLocationsQuery } from "@/shared/services/RickAndMortyApi";
+import { Loader } from "@/shared/ui";
 import { ListPage } from "@/shared/ui";
 
 const Locations = () => {
-  const [locations, setLocations] = useState<[]>([]);
-
-  const getLocations = async (page: number) => {
-    const locations = await RickAndMortyService.getLocations(page);
-    setLocations(locations);
-  };
-
-  useEffect(() => {
-    getLocations(1);
-  }, []);
+  const [page, setPage] = useState<number>(1);
+  const { data, isLoading } = useGetLocationsQuery(page);
 
   return (
     <>
-      <ListPage list={locations} route="locations" title="Type:" />
-      <PaginationPage count={7} onChange={getLocations} />
+      <Loader isOpen={isLoading} />
+      <ListPage list={data?.results} route="locations" title="Type:" />
+      <PaginationPage count={7} onChange={setPage} />
     </>
   );
 };

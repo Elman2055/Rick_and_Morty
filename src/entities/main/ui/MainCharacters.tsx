@@ -1,27 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { PaginationPage } from "@/shared/ui";
-import { RickAndMortyService } from "@/shared/services";
-import { TCharacters } from "@/shared/types";
 import { CharactersCards } from "@/shared/ui";
+import { useGetCharactersQuery } from "@/shared/services/RickAndMortyApi";
+import { Loader } from "@/shared/ui";
 
 const MainCharacters = () => {
-  const [characters, setCharacters] = useState<TCharacters[]>([]);
-
-  const getCharacters = async (page: number) => {
-    const characters = await RickAndMortyService.getCharacters(page);
-    if (characters) setCharacters(characters);
-  };
-
-  useEffect(() => {
-    getCharacters(1);
-  }, []);
+  const [page, setPage] = useState<number>(1);
+  const { data, isLoading } = useGetCharactersQuery(page);
 
   return (
     <>
-      <CharactersCards characters={characters} />
-      <PaginationPage count={42} onChange={getCharacters} />
+      <Loader isOpen={isLoading} />
+      <CharactersCards characters={data?.results} />
+      <PaginationPage count={42} onChange={setPage} />
     </>
   );
 };

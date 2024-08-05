@@ -1,12 +1,20 @@
-import { Character } from "@/features/character";
-import styles from "./CharacterPage.module.scss";
-import { TCharacter } from "@/features/types";
+"use client";
 
-const CharacterPage = ({ character }: { character: TCharacter }) => {
+import { Character } from "@/features/character";
+import { useGetCharacterQuery } from "@/shared/services/RickAndMortyApi";
+import { Loader } from "@/shared/ui";
+import styles from "./CharacterPage.module.css";
+
+const CharacterPage = ({ id }: { id: number }) => {
+  const { data, isLoading } = useGetCharacterQuery(id);
+
   return (
-    <div className={styles.container}>
-      <Character character={character} />
-    </div>
+    <>
+      <Loader isOpen={isLoading} />
+      <div className={styles.container}>
+        <Character character={data} />
+      </div>
+    </>
   );
 };
 

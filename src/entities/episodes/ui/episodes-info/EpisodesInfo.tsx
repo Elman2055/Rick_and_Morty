@@ -1,17 +1,19 @@
 "use client";
 
 import { TListInfo, TCharacters } from "@/shared/types";
-import { SelectedList } from "@/shared/ui";
+import { Loader, SelectedList } from "@/shared/ui";
 import { RickAndMortyService } from "@/shared/services";
 import { CharactersCards } from "@/shared/ui";
 import { useEffect, useState } from "react";
-import styles from "./EpisodesInfo.module.scss";
+import styles from "./EpisodesInfo.module.css";
 
 const EpisodesInfo = ({ episode }: { episode: TListInfo }) => {
   const [characters, setCharacters] = useState<TCharacters[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const getCharacter = async () => {
-    if (episode.characters) {
+    if (episode && episode.characters) {
+      setIsLoading(true);
       const characters = await Promise.all(
         episode.characters.map((url: string) =>
           RickAndMortyService.getSelectedListCharacters(url)
@@ -19,15 +21,17 @@ const EpisodesInfo = ({ episode }: { episode: TListInfo }) => {
       );
 
       setCharacters(characters);
+      setIsLoading(false);
     }
   };
 
   useEffect(() => {
     getCharacter();
-  }, []);
+  }, [episode]);
 
   return (
     <>
+      <Loader isOpen={isLoading} />
       <SelectedList selectedList={episode} />
       <h2 className={styles.title}>Characters involved in this episode</h2>
       <CharactersCards characters={characters} />

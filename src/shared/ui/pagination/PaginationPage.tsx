@@ -1,5 +1,5 @@
-import { Pagination } from "@mui/material";
-import styles from "./PaginationPage.module.scss";
+import { Pagination, useMediaQuery } from "@mui/material";
+import styles from "./PaginationPage.module.css";
 
 type TPagination = {
   count: number;
@@ -7,12 +7,18 @@ type TPagination = {
 };
 
 const PaginationPage = ({ count, onChange }: TPagination) => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
   return (
     <div className={styles.pagination}>
       <Pagination
         count={count}
         color="primary"
-        onChange={(event, page) => onChange(page)}
+        size={isMobile ? "small" : "medium"}
+        onChange={(event, page) => {
+          onChange(page);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
       />
     </div>
   );

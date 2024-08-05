@@ -4,3 +4,9 @@
   margin-bottom: 20px;
   color: #4a90e2;
 }
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 33px;
+  }
+}

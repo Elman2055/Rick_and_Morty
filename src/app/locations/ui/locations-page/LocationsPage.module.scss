@@ -21,5 +21,9 @@
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #4a90e2;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 33px;
+    }
   }
 }

@@ -1,12 +1,20 @@
-import { LocationsInfo } from "@/entities/locations";
-import { TListInfo } from "@/shared/types";
-import styles from "./LocationsInfoPage.module.scss";
+"use client";
 
-const LocationsInfoPage = ({ locations }: { locations: TListInfo }) => {
+import { LocationsInfo } from "@/entities/locations";
+import { useGetLocationInfoQuery } from "@/shared/services/RickAndMortyApi";
+import { Loader } from "@/shared/ui";
+import styles from "./LocationsInfoPage.module.css";
+
+const LocationsInfoPage = ({ id }: { id: number }) => {
+  const { data, isLoading } = useGetLocationInfoQuery(id);
+
   return (
-    <div className={styles.container}>
-      <LocationsInfo locations={locations} />
-    </div>
+    <>
+      <Loader isOpen={isLoading} />
+      <div className={styles.container}>
+        <LocationsInfo locations={data} />
+      </div>
+    </>
   );
 };
 

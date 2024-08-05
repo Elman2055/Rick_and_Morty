@@ -1,10 +1,17 @@
 import { LocationsInfoPage } from "@/app/locations";
-import { RickAndMortyService } from "@/shared/services";
 
-const Location = async ({ params }: any) => {
-  const locations = await RickAndMortyService.getLocationInfo(params.id);
+export const metadata = {
+  title: "Location Info",
+  description: "This is the location info page of the application.",
+  keywords: "Next.js, React, example",
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
-  return <LocationsInfoPage locations={locations} />;
+const Location = ({ params }: any) => {
+  return <LocationsInfoPage id={params.id} />;
 };
 
 export default Location;
