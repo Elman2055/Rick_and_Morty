@@ -1,4 +1,5 @@
 import { CharacterPage } from "@/app/character";
+import { useTranslation } from "react-i18next";
 
 export const metadata = {
   title: "Character Info",

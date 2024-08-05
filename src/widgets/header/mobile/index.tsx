@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import styles from "./index.module.scss";
 import { Button, Collapse, Box } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import styles from "./index.module.scss";
 
 const MobileHeader = () => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
   return (
@@ -14,19 +16,19 @@ const MobileHeader = () => {
           onClick={() => setOpen(!open)}
           style={{ margin: "0 auto" }}
         >
-          Rick & Morty
+          {t("Header.MAIN_TITLE")}
         </Button>
       </header>
       <Collapse in={open}>
         <Box className={styles.headerNavigation}>
           <Link href={"/"} onClick={() => setOpen(!open)}>
-            <h2>Characters</h2>
+            <h2>{t("Header.CHARACTERS_TITLE")}</h2>
           </Link>
           <Link href={"/episodes"} onClick={() => setOpen(!open)}>
-            <h2>Episodes</h2>
+            <h2>{t("Header.EPISODES_TITLE")}</h2>
           </Link>
           <Link href={"/locations"} onClick={() => setOpen(!open)}>
-            <h2>Locations</h2>
+            <h2>{t("Header.LOCATIONS_TITLE")}</h2>
           </Link>
         </Box>
       </Collapse>

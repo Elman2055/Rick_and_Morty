@@ -6,9 +6,12 @@ import { RickAndMortyService } from "@/shared/services";
 import { CharactersCards } from "@/shared/ui";
 import { useEffect, useState } from "react";
 import { Loader } from "@/shared/ui";
+import { useTranslation } from "react-i18next";
 import styles from "./LocationsInfo.module.css";
 
 const LocationsInfo = ({ locations }: { locations: TListInfo }) => {
+  const { t } = useTranslation();
+
   const [residents, setResidents] = useState<TCharacters[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -33,7 +36,7 @@ const LocationsInfo = ({ locations }: { locations: TListInfo }) => {
     <>
       <Loader isOpen={isLoading} />
       <SelectedList selectedList={locations} />
-      <h2 className={styles.title}>Characters involved in this locations</h2>
+      <h2 className={styles.title}>{t("LocationInfoPage.TITLE")}</h2>
       <CharactersCards characters={residents} />
     </>
   );

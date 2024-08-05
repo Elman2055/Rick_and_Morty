@@ -5,9 +5,12 @@ import { Loader, SelectedList } from "@/shared/ui";
 import { RickAndMortyService } from "@/shared/services";
 import { CharactersCards } from "@/shared/ui";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./EpisodesInfo.module.css";
 
 const EpisodesInfo = ({ episode }: { episode: TListInfo }) => {
+  const { t } = useTranslation();
+
   const [characters, setCharacters] = useState<TCharacters[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -33,7 +36,7 @@ const EpisodesInfo = ({ episode }: { episode: TListInfo }) => {
     <>
       <Loader isOpen={isLoading} />
       <SelectedList selectedList={episode} />
-      <h2 className={styles.title}>Characters involved in this episode</h2>
+      <h2 className={styles.title}>{t("EpisodeInfoPage.TITLE")}</h2>
       <CharactersCards characters={characters} />
     </>
   );

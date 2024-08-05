@@ -1,0 +1,23 @@
+{
+  "Header": {
+    "MAIN_TITLE": "Rick & Morty",
+    "CHARACTERS_TITLE": "Characters",
+    "EPISODES_TITLE": "Episodes",
+    "LOCATIONS_TITLE": "Locations"
+  },
+  "MainPage": {
+    "TITLE": "Rick and Morty Characters"
+  },
+  "EpisodesPage": {
+    "TITLE": "Rick and Morty Episodes"
+  },
+  "EpisodeInfoPage": {
+    "TITLE": "Characters involved in this episode"
+  },
+  "LocationsPage": {
+    "TITLE": "Rick and Morty Locations"
+  },
+  "LocationInfoPage": {
+    "TITLE": "Residents involved in this location"
+  }
+}
