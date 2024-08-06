@@ -4,8 +4,7 @@
 
 ## Ссылка на видеообзор проекта:
 
-[Смотреть обзор:](https://drive.google.com/file/d/12uLGFcZb9KqDgV5la5Uq4Etyb76OVyM-/view?usp=sharing)
-
+[Смотреть обзор](https://drive.google.com/file/d/12uLGFcZb9KqDgV5la5Uq4Etyb76OVyM-/view?usp=sharing)
 
 ## Установка и запуск
 
@@ -14,13 +13,15 @@
 1. Клонируйте проект с GitHub:
 
 ```js
-  git clone <URL_вашего_репозитория>
+  git clone <URL_репозитория>
   cd <имя_папки_с_проектом>
 ```
 
 2. Установите зависимости:
 
-npm install
+```js
+  npm install
+```
 
 ## Запуск приложения
 
@@ -43,6 +44,7 @@ npm install
 
 2. # Запуск без Docker
    Если вы предпочитаете не использовать Docker, просто выполните следующую команду:
+
    ```js
    npm run dev
    ```
@@ -59,12 +61,12 @@ npm install
 
 3. **Redux**
 
-4. **Docker**
+4. **RTK Query**
 
-5. **FSD**
+5. **Docker**
 
-6. **Jest**
+6. **FSD**
 
-7. **next-intl locale (localization library)**
+7. **Jest**
 
-8. **RTK Query**
+8. **next-intl locale (localization library)**
