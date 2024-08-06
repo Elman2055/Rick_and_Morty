@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { SelectedList } from "@/shared/ui";
-import { TListInfo } from "@/shared/types";
+import { TListInfo } from "@/shared/types/types";
 
 describe("SelectedList", () => {
   const mockSelectedList: TListInfo = {

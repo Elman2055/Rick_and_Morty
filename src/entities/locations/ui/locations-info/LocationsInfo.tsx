@@ -1,6 +1,6 @@
 "use client";
 
-import { TListInfo, TCharacters } from "@/shared/types";
+import { TListInfo, TCharacters } from "@/shared/types/types";
 import { SelectedList } from "@/shared/ui";
 import { RickAndMortyService } from "@/shared/services";
 import { CharactersCards } from "@/shared/ui";

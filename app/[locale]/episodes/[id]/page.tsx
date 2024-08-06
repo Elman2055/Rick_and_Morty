@@ -9,7 +9,7 @@ export const metadata = {
   },
 };
 
-const Episode = ({ params }: any) => {
+const Episode = ({ params }: { params: { id: number } }) => {
   return <EpisodesInfoPage id={params.id} />;
 };
 

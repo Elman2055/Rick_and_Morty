@@ -1,6 +1,6 @@
 import Link from "next/link";
-import styles from "./index.module.scss";
 import { useTranslations } from "next-intl";
+import styles from "./index.module.scss";
 
 const DesktopHeader = () => {
   const t = useTranslations();

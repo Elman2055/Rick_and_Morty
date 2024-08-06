@@ -1,6 +1,6 @@
 "use client";
 
-import { TCharacter } from "@/shared/types";
+import { TCharacter } from "@/shared/types/types";
 import { useMobileClient } from "@/shared/hooks";
 import { useTranslations } from "next-intl";
 import styles from "./Character.module.scss";

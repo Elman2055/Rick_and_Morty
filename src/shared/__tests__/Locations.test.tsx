@@ -4,15 +4,15 @@ import { useGetLocationsQuery } from "@/shared/services/RickAndMortyApi";
 import { ListPage } from "@/shared/ui";
 import { PaginationPage } from "@/shared/ui";
 
-jest.mock('../services/RickAndMortyApi', () => ({
+jest.mock("../services/RickAndMortyApi", () => ({
   useGetLocationsQuery: jest.fn(),
 }));
 
-jest.mock('../ui/list', () => ({
+jest.mock("../ui/list", () => ({
   ListPage: jest.fn(() => <div></div>),
 }));
 
-jest.mock('../ui/pagination', () => ({
+jest.mock("../ui/pagination", () => ({
   PaginationPage: jest.fn(() => <div></div>),
 }));
 

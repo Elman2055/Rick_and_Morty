@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rick and Morty
 
-## Getting Started
+Данное приложение создано на базе Next.js.
 
-First, run the development server:
+## Ссылка на видеообзор проекта:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[Смотреть обзор:](https://drive.google.com/file/d/12uLGFcZb9KqDgV5la5Uq4Etyb76OVyM-/view?usp=sharing)
+
+
+## Установка и запуск
+
+Для начала работы с проектом, выполните следующие шаги:
+
+1. Клонируйте проект с GitHub:
+
+```js
+  git clone <URL_вашего_репозитория>
+  cd <имя_папки_с_проектом>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Установите зависимости:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Запуск приложения
 
-## Learn More
+**Существует два способа запуска приложения:**
 
-To learn more about Next.js, take a look at the following resources:
+1. # Запуск через Docker
+   Для запуска приложения с помощью Docker, убедитесь, что у вас установлен Docker. Затем выполните следующие команды в консоли:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Соберите образ:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```js
+  docker build -t my-next-app .
+```
 
-## Deploy on Vercel
+Запустите контейнер:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```js
+  docker run -p 3000:3000 my-next-app
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. # Запуск без Docker
+   Если вы предпочитаете не использовать Docker, просто выполните следующую команду:
+   ```js
+   npm run dev
+   ```
+
+## Архитектура
+
+В данном проекте используется архитектура Feature Slice Design (FSD).
+
+## Используемые технологии:
+
+1. **Next**
+
+2. **React**
+
+3. **Redux**
+
+4. **Docker**
+
+5. **FSD**
+
+6. **Jest**
+
+7. **next-intl locale (localization library)**
+
+8. **RTK Query**

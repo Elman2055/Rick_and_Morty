@@ -1,6 +1,6 @@
 import styles from "./ListPage.module.scss";
 import { useRouter } from "next/navigation";
-import { TList, TListInfo } from "@/shared/types";
+import { TList, TListInfo } from "@/shared/types/types";
 
 const ListPage = ({ list, title, route }: TList) => {
   const router = useRouter();

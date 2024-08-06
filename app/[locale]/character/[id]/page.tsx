@@ -1,5 +1,4 @@
 import { CharacterPage } from "@/app/character";
-import { useTranslation } from "react-i18next";
 
 export const metadata = {
   title: "Character Info",
@@ -10,7 +9,7 @@ export const metadata = {
   },
 };
 
-const Character = ({ params }: any) => {
+const Character = ({ params }: { params: { id: number } }) => {
   return <CharacterPage id={params.id} />;
 };
 

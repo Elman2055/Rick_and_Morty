@@ -26,5 +26,10 @@
     "STATUS_TITLE": "Status:",
     "ORIGIN_TITLE": "Origin:",
     "LOCATION_TITLE": "Location"
+  },
+  "SelectedList": {
+    "DATE_TITLE": "Air Date:",
+    "TYPE_TITLE": "Type:",
+    "DIMENSION_TITLE": "Dimension:"
   }
 }

@@ -1,7 +1,10 @@
-import { TListInfo } from "@/shared/types";
+import { TListInfo } from "@/shared/types/types";
+import { useTranslations } from "next-intl";
 import styles from "./SelectedList.module.scss";
 
 const SelectedList = ({ selectedList }: { selectedList: TListInfo }) => {
+  const t = useTranslations();
+
   return (
     <>
       {selectedList && (
@@ -10,15 +13,15 @@ const SelectedList = ({ selectedList }: { selectedList: TListInfo }) => {
             <h2 className={styles.selectedListName}>{selectedList.name}</h2>
             {selectedList.air_date ? (
               <p className={styles.selectedListTitle}>
-                Air Date: {selectedList.air_date}
+                {t("SelectedList.DATE_TITLE")} {selectedList.air_date}
               </p>
             ) : (
               <>
                 <p className={styles.selectedListTitle}>
-                  Type: {selectedList.type}
+                {t("SelectedList.TYPE_TITLE")} {selectedList.type}
                 </p>
                 <p className={styles.selectedListTitle}>
-                  Dimension: {selectedList.dimension}
+                {t("SelectedList.DIMENSION_TITLE")} {selectedList.dimension}
                 </p>
               </>
             )}

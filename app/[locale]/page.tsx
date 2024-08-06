@@ -9,7 +9,7 @@ export const metadata = {
   },
 };
 
-const Page = ({ params }: any) => {
+const Page = () => {
   return <MainPage />;
 };
 

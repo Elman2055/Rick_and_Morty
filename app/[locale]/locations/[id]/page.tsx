@@ -9,7 +9,7 @@ export const metadata = {
   },
 };
 
-const Location = ({ params }: any) => {
+const Location = ({ params }: { params: { id: number } }) => {
   return <LocationsInfoPage id={params.id} />;
 };
 
