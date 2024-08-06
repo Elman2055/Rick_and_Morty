@@ -1,11 +1,9 @@
-"use client";
-
 import { Locations } from "@/entities/locations";
 import styles from "./LocationsPage.module.scss";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 
 const LocationsPage = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <div className={styles.container}>

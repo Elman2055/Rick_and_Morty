@@ -5,11 +5,11 @@ import { Loader, SelectedList } from "@/shared/ui";
 import { RickAndMortyService } from "@/shared/services";
 import { CharactersCards } from "@/shared/ui";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import styles from "./EpisodesInfo.module.css";
 
 const EpisodesInfo = ({ episode }: { episode: TListInfo }) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   const [characters, setCharacters] = useState<TCharacters[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);

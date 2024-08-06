@@ -1,11 +1,9 @@
-"use client";
-
 import { MainCharacters } from "@/entities/main";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import styles from "./MainPage.module.scss";
 
 const Main = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <div className={styles.container}>

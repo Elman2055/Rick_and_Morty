@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Button, Collapse, Box } from "@mui/material";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import styles from "./index.module.scss";
 
 const MobileHeader = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const [open, setOpen] = useState(false);
 
   return (

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 
 const DesktopHeader = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <>
