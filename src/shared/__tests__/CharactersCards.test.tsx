@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import CharactersCards from "./CharactersCards";
+import {CharactersCards} from "@/shared/ui";
 import { useRouter } from "next/navigation";
 import "@testing-library/jest-dom";
 

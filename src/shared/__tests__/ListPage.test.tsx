@@ -1,8 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import ListPage from "./ListPage";
+import {ListPage} from "@/shared/ui";
 import { useRouter } from "next/navigation";
 
-// Мокаем useRouter
 jest.mock("next/navigation", () => ({
   useRouter: jest.fn(),
 }));

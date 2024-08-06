@@ -4,7 +4,7 @@
   text-align: center;
 
   .selectedListItem {
-    background: #f9f9f9;
+    background-color: #d7e1ec;
     margin: 10px 0;
     padding: 12px 20px;
     border-radius: 8px;
@@ -13,11 +13,12 @@
     .selectedListName {
       font-size: 1.5em;
       margin: 0 0 10px 0;
+      color: #29425a;
     }
 
     .selectedListTitle {
       font-size: 1em;
-      color: #666;
+      color: #5c4d4d;
     }
   }
 }

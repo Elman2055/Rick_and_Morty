@@ -19,5 +19,12 @@
   },
   "LocationInfoPage": {
     "TITLE": "Residents involved in this location"
+  },
+  "CharacterPage": {
+    "SPECIES_TITLE": "Species:",
+    "GENDER_TITLE": "Gender:",
+    "STATUS_TITLE": "Status:",
+    "ORIGIN_TITLE": "Origin:",
+    "LOCATION_TITLE": "Location"
   }
 }

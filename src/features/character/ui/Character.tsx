@@ -2,9 +2,11 @@
 
 import { TCharacter } from "@/shared/types";
 import { useMobileClient } from "@/shared/hooks";
+import { useTranslations } from "next-intl";
 import styles from "./Character.module.scss";
 
 const Character = ({ character }: { character: TCharacter }) => {
+  const t = useTranslations();
   const isMobile = useMobileClient();
 
   return (
@@ -24,19 +26,24 @@ const Character = ({ character }: { character: TCharacter }) => {
               />
               <h2>{character.name}</h2>
               <p>
-                <b>Species:</b> {character.species}
+                <b>{t("CharacterPage.SPECIES_TITLE")}</b>{" "}
+                <span>{character.species}</span>
               </p>
               <p>
-                <b>Gender:</b> {character.gender}
+                <b>{t("CharacterPage.GENDER_TITLE")}</b>{" "}
+                <span>{character.gender}</span>
               </p>
               <p>
-                <b>Status:</b> {character.status}
+                <b>{t("CharacterPage.STATUS_TITLE")}</b>{" "}
+                <span>{character.status}</span>
               </p>
               <p>
-                <b>Origin:</b> {character.origin.name}
+                <b>{t("CharacterPage.ORIGIN_TITLE")}</b>{" "}
+                <span>{character.origin.name}</span>
               </p>
               <p>
-                <b>Location:</b> {character.location.name}
+                <b>{t("CharacterPage.LOCATION_TITLE")}</b>{" "}
+                <span>{character.location.name}</span>
               </p>
             </div>
           </div>
