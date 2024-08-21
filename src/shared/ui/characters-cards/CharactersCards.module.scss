@@ -34,9 +34,9 @@
     }
 
     &:hover {
-      transform: scale(1.05); /* Увеличение карточки */
-      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Увеличение тени */
-      background-color: #d1d1d1; /* Изменение цвета фона */
+      transform: scale(1.05);
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+      background-color: #d1d1d1;
     }
   }
 }
