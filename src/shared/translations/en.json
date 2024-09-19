@@ -1,9 +1,9 @@
 {
   "Header": {
-    "MAIN_TITLE": "Rick & Morty",
-    "CHARACTERS_TITLE": "Characters",
+    "MAIN_TITLE": "Characters",
     "EPISODES_TITLE": "Episodes",
-    "LOCATIONS_TITLE": "Locations"
+    "LOCATIONS_TITLE": "Locations",
+    "MOBILE_MAIN_TITLE": "Rick and Morty"
   },
   "MainPage": {
     "TITLE": "Rick and Morty Characters"

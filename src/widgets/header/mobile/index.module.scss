@@ -1,62 +1,109 @@
-.headerContainer {
+.wrapper {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #2980b9;
-  z-index: 300;
+  box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  z-index: 200;
 
-  header {
+  .container {
+    width: 90%;
     margin: 0 auto;
-    height: 60px;
-    width: 75%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 
-    h2 {
-      margin-right: auto;
+    .sideIcons {
+      cursor: pointer;
+
+      .sideBtn {
+        height: 2px;
+        width: 20px;
+        background-color: #ffff;
+        transition: transform 0.3s ease-in-out;
+
+        &:first-child {
+          margin-bottom: 6px;
+        }
+      }
+
+      .openSideBtn {
+        width: 30px;
+        transform: rotate(-45deg);
+        margin-top: -2px;
+
+        &:first-child {
+          margin: 0;
+          transform: rotate(45deg);
+        }
+      }
     }
 
-    button {
-      margin-left: auto;
+    .navContainer {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      a {
+        text-decoration: none;
+        color: #ffff;
+      }
+
+      .mobileLogoLink {
+        width: 10%;
+        color: #ffff;
+
+        .mobileLogoImage {
+          height: auto;
+          width: 45px;
+        }
+      }
     }
   }
+}
 
-  .headerNavigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-    background-color: #2980b9;
-    width: 100%;
+.sideContent {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: #2980b9;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
 
-    h3 {
-      margin-top: 10px;
-    }
-
-    h2 {
-      margin: 15px 0px;
-    }
+  .sideContainer {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 90px;
 
     a {
-      position: relative;
       text-decoration: none;
-      color: white;
-      padding: 5px 0;
-      text-align: center;
+      color: #ffff;
 
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 15px;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background-color: white;
-        border-radius: 10px;
-        transform: scaleX(1);
-        transform-origin: bottom;
+      h3 {
+        padding: 15px 0;
+        font-size: 25px;
+        border-top: 2px solid #ffff;
       }
+    }
+
+    &:last-child {
+      border-bottom: 2px solid #ffff;
+    }
+  }
+}
+
+.open {
+  left: 0;
+}
+
+@media (max-width: 500px) {
+  .navContainer {
+    h3 {
+      padding-left: 15px;
     }
   }
 }

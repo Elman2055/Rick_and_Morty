@@ -10,7 +10,7 @@ const lora = Lora({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.svg",
   },
 };
 

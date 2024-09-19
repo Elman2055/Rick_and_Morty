@@ -1,7 +1,7 @@
 .container {
   width: 80%;
   margin: 20px auto;
-  margin-top: 70px;
+  margin-top: 7%;
 
   .title {
     text-align: center;
@@ -9,7 +9,7 @@
     margin-bottom: 20px;
     color: #4a90e2;
 
-    @media only screen and (max-width: 600px) {
+    @media (max-width: 600px) {
       font-size: 33px;
     }
   }
