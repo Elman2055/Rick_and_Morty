@@ -1,5 +1,11 @@
 .container {
   width: 80%;
   margin: 20px auto;
-  margin-top: 70px;
+  margin-top: 100px;
+}
+
+@media (min-width: 1700px) {
+  .container {
+    margin-top: 6%;
+  }
 }
